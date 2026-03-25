@@ -1,0 +1,213 @@
+is_global = true
+build_property.TargetFramework = net9.0
+build_property.TargetFramework = net9.0
+build_property.TargetPlatformMinVersion = 
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = LearningPlatformSystem
+build_property.RootNamespace = LearningPlatformSystem
+build_property.ProjectDir = D:\Current\AliTheGreat\AliPersona\Projects\Websites\RUST_Portal\RUST_Portal\LearningPlatformSystem\LearningPlatformSystem\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 9.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = D:\Current\AliTheGreat\AliPersona\Projects\Websites\RUST_Portal\RUST_Portal\LearningPlatformSystem\LearningPlatformSystem
+build_property._RazorSourceGeneratorDebug = 
+build_property.EffectiveAnalysisLevelStyle = 9.0
+build_property.EnableCodeStyleSeverity = 
+
+[D:/Current/AliTheGreat/AliPersona/Projects/Websites/RUST_Portal/RUST_Portal/LearningPlatformSystem/LearningPlatformSystem/Views/Account/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Current/AliTheGreat/AliPersona/Projects/Websites/RUST_Portal/RUST_Portal/LearningPlatformSystem/LearningPlatformSystem/Views/AwardedCertificates/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXdhcmRlZENlcnRpZmljYXRlc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Current/AliTheGreat/AliPersona/Projects/Websites/RUST_Portal/RUST_Portal/LearningPlatformSystem/LearningPlatformSystem/Views/AwardedCertificates/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXdhcmRlZENlcnRpZmljYXRlc1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Current/AliTheGreat/AliPersona/Projects/Websites/RUST_Portal/RUST_Portal/LearningPlatformSystem/LearningPlatformSystem/Views/AwardedCertificates/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXdhcmRlZENlcnRpZmljYXRlc1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Current/AliTheGreat/AliPersona/Projects/Websites/RUST_Portal/RUST_Portal/LearningPlatformSystem/LearningPlatformSystem/Views/AwardedCertificates/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXdhcmRlZENlcnRpZmljYXRlc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Current/AliTheGreat/AliPersona/Projects/Websites/RUST_Portal/RUST_Portal/LearningPlatformSystem/LearningPlatformSystem/Views/AwardedCertificates/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXdhcmRlZENlcnRpZmljYXRlc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Current/AliTheGreat/AliPersona/Projects/Websites/RUST_Portal/RUST_Portal/LearningPlatformSystem/LearningPlatformSystem/Views/Courses/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ291cnNlc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Current/AliTheGreat/AliPersona/Projects/Websites/RUST_Portal/RUST_Portal/LearningPlatformSystem/LearningPlatformSystem/Views/Courses/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ291cnNlc1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Current/AliTheGreat/AliPersona/Projects/Websites/RUST_Portal/RUST_Portal/LearningPlatformSystem/LearningPlatformSystem/Views/Courses/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ291cnNlc1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Current/AliTheGreat/AliPersona/Projects/Websites/RUST_Portal/RUST_Portal/LearningPlatformSystem/LearningPlatformSystem/Views/Courses/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ291cnNlc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Current/AliTheGreat/AliPersona/Projects/Websites/RUST_Portal/RUST_Portal/LearningPlatformSystem/LearningPlatformSystem/Views/Courses/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ291cnNlc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Current/AliTheGreat/AliPersona/Projects/Websites/RUST_Portal/RUST_Portal/LearningPlatformSystem/LearningPlatformSystem/Views/Enrollment/AllRequests.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW5yb2xsbWVudFxBbGxSZXF1ZXN0cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Current/AliTheGreat/AliPersona/Projects/Websites/RUST_Portal/RUST_Portal/LearningPlatformSystem/LearningPlatformSystem/Views/Enrollment/PendingRequests.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW5yb2xsbWVudFxQZW5kaW5nUmVxdWVzdHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Current/AliTheGreat/AliPersona/Projects/Websites/RUST_Portal/RUST_Portal/LearningPlatformSystem/LearningPlatformSystem/Views/Learners/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGVhcm5lcnNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Current/AliTheGreat/AliPersona/Projects/Websites/RUST_Portal/RUST_Portal/LearningPlatformSystem/LearningPlatformSystem/Views/Learners/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGVhcm5lcnNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Current/AliTheGreat/AliPersona/Projects/Websites/RUST_Portal/RUST_Portal/LearningPlatformSystem/LearningPlatformSystem/Views/Learners/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGVhcm5lcnNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Current/AliTheGreat/AliPersona/Projects/Websites/RUST_Portal/RUST_Portal/LearningPlatformSystem/LearningPlatformSystem/Views/Learners/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGVhcm5lcnNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Current/AliTheGreat/AliPersona/Projects/Websites/RUST_Portal/RUST_Portal/LearningPlatformSystem/LearningPlatformSystem/Views/Learners/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGVhcm5lcnNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Current/AliTheGreat/AliPersona/Projects/Websites/RUST_Portal/RUST_Portal/LearningPlatformSystem/LearningPlatformSystem/Views/LearningMaterials/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGVhcm5pbmdNYXRlcmlhbHNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Current/AliTheGreat/AliPersona/Projects/Websites/RUST_Portal/RUST_Portal/LearningPlatformSystem/LearningPlatformSystem/Views/LearningMaterials/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGVhcm5pbmdNYXRlcmlhbHNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Current/AliTheGreat/AliPersona/Projects/Websites/RUST_Portal/RUST_Portal/LearningPlatformSystem/LearningPlatformSystem/Views/LearningMaterials/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGVhcm5pbmdNYXRlcmlhbHNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Current/AliTheGreat/AliPersona/Projects/Websites/RUST_Portal/RUST_Portal/LearningPlatformSystem/LearningPlatformSystem/Views/LearningMaterials/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGVhcm5pbmdNYXRlcmlhbHNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Current/AliTheGreat/AliPersona/Projects/Websites/RUST_Portal/RUST_Portal/LearningPlatformSystem/LearningPlatformSystem/Views/LearningMaterials/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGVhcm5pbmdNYXRlcmlhbHNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Current/AliTheGreat/AliPersona/Projects/Websites/RUST_Portal/RUST_Portal/LearningPlatformSystem/LearningPlatformSystem/Views/Panel/CreateUser.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFuZWxcQ3JlYXRlVXNlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Current/AliTheGreat/AliPersona/Projects/Websites/RUST_Portal/RUST_Portal/LearningPlatformSystem/LearningPlatformSystem/Views/Panel/EditUser.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFuZWxcRWRpdFVzZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Current/AliTheGreat/AliPersona/Projects/Websites/RUST_Portal/RUST_Portal/LearningPlatformSystem/LearningPlatformSystem/Views/Panel/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFuZWxcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Current/AliTheGreat/AliPersona/Projects/Websites/RUST_Portal/RUST_Portal/LearningPlatformSystem/LearningPlatformSystem/Views/Panel/ManageEnrollments.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFuZWxcTWFuYWdlRW5yb2xsbWVudHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Current/AliTheGreat/AliPersona/Projects/Websites/RUST_Portal/RUST_Portal/LearningPlatformSystem/LearningPlatformSystem/Views/Panel/MyCertificates.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFuZWxcTXlDZXJ0aWZpY2F0ZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Current/AliTheGreat/AliPersona/Projects/Websites/RUST_Portal/RUST_Portal/LearningPlatformSystem/LearningPlatformSystem/Views/Panel/MyCourses.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFuZWxcTXlDb3Vyc2VzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Current/AliTheGreat/AliPersona/Projects/Websites/RUST_Portal/RUST_Portal/LearningPlatformSystem/LearningPlatformSystem/Views/Panel/MyEnrollmentStatus.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFuZWxcTXlFbnJvbGxtZW50U3RhdHVzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Current/AliTheGreat/AliPersona/Projects/Websites/RUST_Portal/RUST_Portal/LearningPlatformSystem/LearningPlatformSystem/Views/Panel/UsersDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFuZWxcVXNlcnNEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Current/AliTheGreat/AliPersona/Projects/Websites/RUST_Portal/RUST_Portal/LearningPlatformSystem/LearningPlatformSystem/Views/Public/About.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHVibGljXEFib3V0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Current/AliTheGreat/AliPersona/Projects/Websites/RUST_Portal/RUST_Portal/LearningPlatformSystem/LearningPlatformSystem/Views/Public/Courses.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHVibGljXENvdXJzZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Current/AliTheGreat/AliPersona/Projects/Websites/RUST_Portal/RUST_Portal/LearningPlatformSystem/LearningPlatformSystem/Views/Public/CreateUser.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHVibGljXENyZWF0ZVVzZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Current/AliTheGreat/AliPersona/Projects/Websites/RUST_Portal/RUST_Portal/LearningPlatformSystem/LearningPlatformSystem/Views/Public/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHVibGljXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Current/AliTheGreat/AliPersona/Projects/Websites/RUST_Portal/RUST_Portal/LearningPlatformSystem/LearningPlatformSystem/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Current/AliTheGreat/AliPersona/Projects/Websites/RUST_Portal/RUST_Portal/LearningPlatformSystem/LearningPlatformSystem/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Current/AliTheGreat/AliPersona/Projects/Websites/RUST_Portal/RUST_Portal/LearningPlatformSystem/LearningPlatformSystem/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Current/AliTheGreat/AliPersona/Projects/Websites/RUST_Portal/RUST_Portal/LearningPlatformSystem/LearningPlatformSystem/Views/Tutors/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHV0b3JzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Current/AliTheGreat/AliPersona/Projects/Websites/RUST_Portal/RUST_Portal/LearningPlatformSystem/LearningPlatformSystem/Views/Tutors/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHV0b3JzXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Current/AliTheGreat/AliPersona/Projects/Websites/RUST_Portal/RUST_Portal/LearningPlatformSystem/LearningPlatformSystem/Views/Tutors/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHV0b3JzXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Current/AliTheGreat/AliPersona/Projects/Websites/RUST_Portal/RUST_Portal/LearningPlatformSystem/LearningPlatformSystem/Views/Tutors/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHV0b3JzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Current/AliTheGreat/AliPersona/Projects/Websites/RUST_Portal/RUST_Portal/LearningPlatformSystem/LearningPlatformSystem/Views/Tutors/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHV0b3JzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Current/AliTheGreat/AliPersona/Projects/Websites/RUST_Portal/RUST_Portal/LearningPlatformSystem/LearningPlatformSystem/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Current/AliTheGreat/AliPersona/Projects/Websites/RUST_Portal/RUST_Portal/LearningPlatformSystem/LearningPlatformSystem/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Current/AliTheGreat/AliPersona/Projects/Websites/RUST_Portal/RUST_Portal/LearningPlatformSystem/LearningPlatformSystem/Views/Shared/_PublicLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9QdWJsaWNMYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-8mqolje2rz

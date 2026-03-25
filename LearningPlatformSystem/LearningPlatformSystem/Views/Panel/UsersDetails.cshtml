@@ -1,0 +1,64 @@
+﻿@model List<LearningPlatformSystem.Models.CoreModels.AllUsers>
+@using Microsoft.AspNetCore.Identity
+@inject UserManager<LearningPlatformSystem.Models.CoreModels.AuthUsers> UserManager
+
+<h2>Users Management</h2>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Email</th>
+            <th>Name</th>
+            <th>Sign Up Date</th>
+            <th>Roles</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var user in Model)
+        {
+            var isCurrentUser = UserManager.GetUserId(User) == user.Id;
+            var isDefaultAdmin = user.Email == "ali@gmail.com"; 
+
+            <tr>
+                <td>@user.Email</td>
+                <td>@user.FirstName @user.LastName</td>
+                <td>@user.SignUpDate.ToString("d")</td>
+                <td>@string.Join(", ", user.Roles)</td>
+                <td>
+                    @if (!isCurrentUser && !isDefaultAdmin)
+                    {
+                        @if (User.IsInRole("Admin"))
+                        {
+                            <a asp-action="EditUser" asp-route-id="@user.Id" class="btn btn-sm btn-primary">Edit</a>
+                            <form asp-action="DeleteUser" method="post" style="display:inline" id="deleteForm-@user.Id">
+                                <input type="hidden" name="id" value="@user.Id" />
+                                <button type="submit" class="btn btn-sm btn-danger"
+                                onclick="return confirm('Are you sure you want to delete this user?')">
+                                    Delete
+                                </button>
+                            </form>
+                        }
+                        else
+                        {
+                            <span class="text-info">ليس لديك صلاحية أدمن للتعديل</span>
+
+                        }
+
+                    }
+                    else
+                    {
+                        if (isCurrentUser)
+                        {
+                            <span class="text-success">المستخدم الحالي</span>
+                        }
+                       else if (isDefaultAdmin)
+                        {
+                            <span class="text-dark">مالك الموقع</span>
+                        }
+                    }
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

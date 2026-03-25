@@ -1,0 +1,77 @@
+﻿@model List<LearningPlatformSystem.Models.CoreModels.EnrollmentStatusViewModel>
+
+@{
+    ViewData["Title"] = "My Enrollment Status";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+@if (!Model.Any())
+{
+    <div class="alert alert-info">
+        You have no enrollment requests.
+    </div>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Course</th>
+                <th>Status</th>
+                <th>Request Date</th>
+                <th>Processed Date</th>
+                <th>Details</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var request in Model)
+            {
+                <tr>
+                    <td>@request.CourseTitle</td>
+                    <td>
+                        @if (request.Status == "Approved")
+                        {
+                            <span class="badge bg-success">@request.Status</span>
+                        }
+                        else if (request.Status == "Rejected")
+                        {
+                            <span class="badge bg-danger">@request.Status</span>
+                        }
+                        else
+                        {
+                            <span class="badge bg-warning">@request.Status</span>
+                        }
+                    </td>
+                    <td>@request.RequestDate.ToString("d")</td>
+                    <td>@(request.ProcessedDate?.ToString("d") ?? "N/A")</td>
+                    <td>
+                        @if (request.Status == "Rejected" && !string.IsNullOrEmpty(request.RejectionReason))
+                        {
+                            <button type="button" class="btn btn-sm btn-info" data-bs-toggle="modal" data-bs-target="#reasonModal-@request.CourseId">
+                                View Reason
+                            </button>
+
+                            <div class="modal fade" id="reasonModal-@request.CourseId" tabindex="-1" role="dialog" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title">Rejection Reason</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <p>@request.RejectionReason</p>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}

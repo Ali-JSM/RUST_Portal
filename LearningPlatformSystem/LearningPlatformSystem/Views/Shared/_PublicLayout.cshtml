@@ -1,0 +1,12 @@
+﻿<!DOCTYPE html>
+<html lang="En">
+<head>
+</head>
+<body>
+    @* صفحة حدود نقوم برندرة ثلاث صفحات بداخلها موجودات بالpublic *@
+    <main role="main" class="pb-3">
+        @RenderBody()
+    </main>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

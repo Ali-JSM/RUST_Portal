@@ -1,0 +1,44 @@
+﻿@model List<LearningPlatformSystem.Models.CoreModels.EnrollmentRequest>
+
+@{
+    ViewData["Title"] = "All Enrollment Requests";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Course</th>
+            <th>Learner</th>
+            <th>Request Date</th>
+            <th>Status</th>
+            <th>Processed Date</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var request in Model)
+        {
+            <tr>
+                <td>@request.Course.Title</td>
+                <td>@($"{request.Learner.FirstName} {request.Learner.LastName}")</td>
+                <td>@request.RequestDate.ToString("d")</td>
+                <td>
+                    @if (request.IsApproved)
+                    {
+                        <span class="badge bg-success">Approved</span>
+                    }
+                    else if (request.IsRejected)
+                    {
+                        <span class="badge bg-danger">Rejected</span>
+                    }
+                    else
+                    {
+                        <span class="badge bg-warning">Pending</span>
+                    }
+                </td>
+                <td>@(request.ProcessedDate?.ToString("d") ?? "N/A")</td>
+            </tr>
+        }
+    </tbody>
+</table>

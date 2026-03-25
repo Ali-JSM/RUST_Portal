@@ -1,0 +1,390 @@
+﻿@using LearningPlatformSystem.Models.TableModels
+@using Microsoft.AspNetCore.Identity
+@using LearningPlatformSystem.Models.CoreModels
+@using LearningPlatformSystem.Context
+@using Microsoft.EntityFrameworkCore
+@model Course
+@inject UserManager<AuthUsers> UserManager
+@inject MyContext Context
+
+@{
+    ViewData["Title"] = "Course Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var enrollmentStatus = "NotRequested"; 
+    var enrollmentRequest = (EnrollmentRequest)null;
+    var learnerId = 0;
+    var isEnrolled = false;
+
+    if (User.Identity.IsAuthenticated && User.IsInRole("Learner"))
+    {
+        var user = await UserManager.GetUserAsync(User);
+        var learner = await Context.Learners
+            .FirstOrDefaultAsync(l => l.Email == user.Email);
+
+        if (learner != null)
+        {
+            learnerId = learner.LearnerId;
+
+            isEnrolled = await Context.Courses
+                .Where(c => c.CourseCode == Model.CourseCode)
+                .SelectMany(c => c.Learners)
+                .AnyAsync(l => l.LearnerId == learner.LearnerId);
+
+            enrollmentRequest = await Context.EnrollmentRequests
+                .FirstOrDefaultAsync(r => r.CourseId == Model.CourseCode &&
+                                        r.LearnerId == learner.LearnerId);
+
+            if (isEnrolled)
+            {
+                enrollmentStatus = "Approved";
+            }
+            else if (enrollmentRequest != null)
+            {
+                if (enrollmentRequest.IsApproved)
+                {
+                    enrollmentStatus = "Removed";
+                }
+                else if (enrollmentRequest.IsRejected)
+                {
+                    enrollmentStatus = "Rejected";
+                }
+                else
+                {
+                    enrollmentStatus = "Pending";
+                }
+            }
+        }
+    }
+}
+
+<div class="container py-4">
+    <div class="card shadow">
+        <div class="card-header bg-primary text-white">
+            <h1 class="mb-0">@Model.Title</h1>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="mb-4">
+                        <h4>Course Description</h4>
+                        <p class="lead">@Model.Description</p>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="card mb-4">
+                                <div class="card-header bg-light">
+                                    <h5>Course Information</h5>
+                                </div>
+                                <div class="card-body">
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                                            <span>Category</span>
+                                            <span class="badge bg-primary">@Model.Category</span>
+                                        </li>
+                                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                                            <span>Required Level</span>
+                                            <span>@Model.RequiredLevel</span>
+                                        </li>
+                                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                                            <span>Duration</span>
+                                            <span>@Model.Hours hours</span>
+                                        </li>
+                                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                                            <span>Language</span>
+                                            <span>@Model.Language</span>
+                                        </li>
+                                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                                            <span>Created</span>
+                                            <span>@Model.CreationDate.ToString("d")</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="card mb-4">
+                                <div class="card-header bg-light">
+                                    <h5>Instructor</h5>
+                                </div>
+                                <div class="card-body">
+                                    <div class="d-flex align-items-center">
+                                        <div class="flex-shrink-0">
+											<img src="~/assets/images/buttons/admin (2).png"
+                                                 alt="@Model.Tutor?.FirstName"
+                                                 class="rounded-circle"
+                                                 width="80" height="80">
+                                        </div>
+                                        <div class="flex-grow-1 ms-3">
+                                            <h5>@Model.Tutor?.FirstName @Model.Tutor?.LastName</h5>
+                                            <p class="text-muted mb-0">Course Instructor</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header bg-light">
+                            <h5>Learning Objectives</h5>
+                        </div>
+                        <div class="card-body">
+                            <ul class="list-group list-group-flush">
+                                @foreach (var objective in Model.CourseObjective.Split(new[] { '.', ';' }, StringSplitOptions.RemoveEmptyEntries))
+                                {
+                                    if (!string.IsNullOrWhiteSpace(objective))
+                                    {
+                                        <li class="list-group-item">
+                                            <i class="fas fa-check-circle text-success me-2"></i>
+                                            @objective.Trim()
+                                        </li>
+                                    }
+                                }
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card shadow-sm sticky-top" style="top: 20px;">
+                        <div class="card-header bg-primary text-white">
+                            <h5 class="mb-0">Enrollment Status</h5>
+                        </div>
+                        <div class="card-body">
+                            @if (User.IsInRole("Learner"))
+                            {
+                                if (enrollmentStatus == "Approved")
+                                {
+                                    <div class="alert alert-success">
+                                        <div class="d-flex align-items-center">
+                                            <i class="fas fa-check-circle fa-2x me-3"></i>
+                                            <div>
+                                                <h5>Enrolled</h5>
+                                                <p class="mb-0">You're enrolled in this course</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a asp-controller="Panel" asp-action="MyCourses" class="btn btn-success w-100 mb-2">
+                                        <i class="fas fa-book-open me-2"></i> Continue Learning
+                                    </a>
+                                }
+                                else if (enrollmentStatus == "Removed")
+                                {
+                                    <div class="alert alert-warning">
+                                        <div class="d-flex align-items-center">
+                                            <i class="fas fa-exclamation-triangle fa-2x me-3"></i>
+                                            <div>
+                                                <h5>Enrollment Removed</h5>
+                                                <p class="mb-0">Your enrollment was removed by an administrator</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <form asp-controller="Enrollment" asp-action="RequestEnrollment" method="post">
+                                        <input type="hidden" name="courseId" value="@Model.CourseCode" />
+                                        <button type="submit" class="btn btn-primary w-100">
+                                            <i class="fas fa-redo-alt me-2"></i> Request Enrollment Again
+                                        </button>
+                                    </form>
+                                }
+                                else if (enrollmentStatus == "Rejected")
+                                {
+                                    <div class="alert alert-danger">
+                                        <div class="d-flex align-items-center">
+                                            <i class="fas fa-times-circle fa-2x me-3"></i>
+                                            <div>
+                                                <h5>Enrollment Rejected</h5>
+                                                <p class="mb-0">Your request was not approved</p>
+                                                @if (!string.IsNullOrEmpty(enrollmentRequest?.RejectionReason))
+                                                {
+                                                    <div class="mt-2">
+                                                        <button class="btn btn-sm btn-info" data-bs-toggle="modal" data-bs-target="#rejectionReasonModal">
+                                                            View Rejection Reason
+                                                        </button>
+                                                    </div>
+                                                }
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <form asp-controller="Enrollment" asp-action="RequestEnrollment" method="post">
+                                        <input type="hidden" name="courseId" value="@Model.CourseCode" />
+                                        <button type="submit" class="btn btn-primary w-100">
+                                            <i class="fas fa-redo-alt me-2"></i> Request Again
+                                        </button>
+                                    </form>
+                                }
+                                else if (enrollmentStatus == "Pending")
+                                {
+                                    <div class="alert alert-info">
+                                        <div class="d-flex align-items-center">
+                                            <i class="fas fa-clock fa-2x me-3"></i>
+                                            <div>
+                                                <h5>Pending Approval</h5>
+                                                <p class="mb-0">Your request is being reviewed</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                }
+                                else
+                                {
+                                    <form asp-controller="Enrollment" asp-action="RequestEnrollment" method="post">
+                                        <input type="hidden" name="courseId" value="@Model.CourseCode" />
+                                        <button type="submit" class="btn btn-primary w-100 btn-lg">
+                                            <i class="fas fa-user-plus me-2"></i> Request Enrollment
+                                        </button>
+                                    </form>
+                                }
+                            }
+                            else if (!User.Identity.IsAuthenticated)
+                            {
+                                <div class="alert alert-warning">
+                                    <div class="d-flex align-items-center">
+                                        <i class="fas fa-exclamation-circle fa-2x me-3"></i>
+                                        <div>
+                                            <h5>Login Required</h5>
+                                            <p class="mb-0">Please login as a learner to enroll</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a asp-controller="Account" asp-action="Login" class="btn btn-outline-primary w-100">
+                                    <i class="fas fa-sign-in-alt me-2"></i> Login Now
+                                </a>
+                            }
+                            else
+                            {
+                                <div class="alert alert-info">
+                                    <i class="fas fa-info-circle me-2"></i>
+                                    Only learners can enroll in courses
+                                </div>
+                            }
+
+                            <div class="mt-4">
+                                <h6>Course Details</h6>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item d-flex justify-content-between">
+                                        <span>Category:</span>
+                                        <span>@Model.Category</span>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between">
+                                        <span>Level:</span>
+                                        <span>@Model.RequiredLevel</span>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between">
+                                        <span>Duration:</span>
+                                        <span>@Model.Hours hours</span>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between">
+                                        <span>Created:</span>
+                                        <span>@Model.CreationDate.ToString("d")</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card-footer d-flex justify-content-between">
+            <div>
+                @if (User.IsInRole("Editor") || User.IsInRole("Admin"))
+                {
+                    <a asp-action="Edit" asp-route-id="@Model.CourseCode" class="btn btn-outline-primary">
+                        <i class="fas fa-edit me-2"></i> Edit Course
+                    </a>
+                }
+                <a asp-action="Index" class="btn btn-outline-secondary ms-2">
+                    <i class="fas fa-arrow-left me-2"></i> Back to List
+                </a>
+            </div>
+            <div>
+                @if (enrollmentStatus == "Approved")
+                {
+                    <span class="badge bg-success p-2">
+                        <i class="fas fa-check-circle me-1"></i> Enrolled
+                    </span>
+                }
+                else if (enrollmentStatus == "Removed")
+                {
+                    <span class="badge bg-warning p-2">
+                        <i class="fas fa-user-minus me-1"></i> Removed
+                    </span>
+                }
+                else if (enrollmentStatus == "Rejected")
+                {
+                    <span class="badge bg-danger p-2">
+                        <i class="fas fa-times-circle me-1"></i> Rejected
+                    </span>
+                }
+                else if (enrollmentStatus == "Pending")
+                {
+                    <span class="badge bg-info p-2">
+                        <i class="fas fa-clock me-1"></i> Pending
+                    </span>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+
+@if (enrollmentStatus == "Rejected" && !string.IsNullOrEmpty(enrollmentRequest?.RejectionReason))
+{
+    <div class="modal fade" id="rejectionReasonModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Rejection Reason</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>@enrollmentRequest.RejectionReason</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+@section Styles {
+    <style>
+        .card {
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+            .card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            }
+
+        .list-group-item {
+            border: none;
+            padding: 0.75rem 0;
+        }
+
+        .sticky-top {
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .badge {
+            font-size: 0.9rem;
+            padding: 0.5em 0.8em;
+        }
+    </style>
+}
+
+@section Scripts {
+    <script>
+        document.querySelector('.btn-primary')?.addEventListener('mouseover', function() {
+            this.style.transform = 'scale(1.02)';
+        });
+
+        document.querySelector('.btn-primary')?.addEventListener('mouseout', function() {
+            this.style.transform = 'scale(1)';
+        });
+    </script>
+}

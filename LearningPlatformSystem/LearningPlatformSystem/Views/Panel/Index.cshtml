@@ -1,0 +1,76 @@
+﻿@model LearningPlatformSystem.Models.CoreModels.AuthUsers
+
+<div class="container">
+    <h2>Welcome, @Model.FirstName @Model.LastName!</h2>
+
+    @if (User.IsInRole("Admin"))
+    {
+        <div class="row mt-5">
+            <div class="col-md-3">
+                <a asp-controller="Panel" asp-action="UsersDetails" style="text-decoration: none; cursor:pointer">
+                <div class="card bg-primary text-white">
+                    <div class="card-body">
+                        <h5 class="card-title">Total Users</h5>
+                        <p class="display-4">@ViewBag.Stats.TotalUsers</p>
+                    </div>
+                </div>
+                </a>
+            </div>
+            <div class="col-md-3">
+               <a asp-controller="Courses" asp-action="Index" style="text-decoration: none; cursor:pointer">
+                <div class="card bg-success text-white">
+                    <div class="card-body">
+                        <h5 class="card-title">Total Courses</h5>
+                        <p class="display-4">@ViewBag.Stats.TotalCourses</p>
+                    </div>
+                </div>
+                </a>
+            </div>
+            <div class="col-md-3">
+                <a asp-controller="Enrollment" asp-action="PendingRequests" style="text-decoration: none; cursor:pointer">
+
+                <div class="card bg-warning text-dark">
+                    <div class="card-body">
+                        <h5 class="card-title">Pending Requests</h5>
+                        <p class="display-4">@ViewBag.Stats.PendingRequests</p>
+                    </div>
+                </div>
+                </a>
+            </div>
+            <div class="col-md-3">
+                                <a asp-controller="Learners" asp-action="Index" style="text-decoration: none; cursor:pointer">
+
+                <div class="card bg-info text-white">
+                    <div class="card-body">
+                        <h5 class="card-title">Total Learners</h5>
+                        <p class="display-4">@ViewBag.Stats.TotalLearners</p>
+                    </div>
+                </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="mt-5">
+            <h3>Recent Signups</h3>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Signup Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var user in ViewBag.Stats.RecentSignups)
+                    {
+                        <tr>
+                            <td>@user.FirstName @user.LastName</td>
+                            <td>@user.Email</td>
+                            <td>@user.SignUpDate.ToString("d")</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    }
+</div>
