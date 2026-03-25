@@ -8585,3 +8585,4 @@ D:\Current\AliTheGreat\AliPersona\Projects\Websites\RUST_Portal\RUST_Portal\Lear
 D:\Current\AliTheGreat\AliPersona\Projects\Websites\RUST_Portal\RUST_Portal\LearningPlatformSystem\LearningPlatformSystem\obj\Debug\net9.0\LearningPlatformSystem.pdb
 D:\Current\AliTheGreat\AliPersona\Projects\Websites\RUST_Portal\RUST_Portal\LearningPlatformSystem\LearningPlatformSystem\obj\Debug\net9.0\LearningPlatformSystem.genruntimeconfig.cache
 D:\Current\AliTheGreat\AliPersona\Projects\Websites\RUST_Portal\RUST_Portal\LearningPlatformSystem\LearningPlatformSystem\obj\Debug\net9.0\ref\LearningPlatformSystem.dll
+D:\Current\AliTheGreat\AliPersona\Projects\Websites\RUST_Portal\RUST_Portal\LearningPlatformSystem\LearningPlatformSystem\obj\Debug\net9.0\LearningPlatformSystem.sourcelink.json

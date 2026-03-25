@@ -1,12 +1,14 @@
 ﻿<!DOCTYPE html>
 <html lang="En">
 <head>
+    <link rel="stylesheet" href="~/publicthemeassets/assets/css/bootstrap.min.css">
 </head>
 <body>
-    @* صفحة حدود نقوم برندرة ثلاث صفحات بداخلها موجودات بالpublic *@
     <main role="main" class="pb-3">
         @RenderBody()
     </main>
     @await RenderSectionAsync("Scripts", required: false)
+    <script src="~/publicthemeassets/assets/js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="~/publicthemeassets/assets/js/bootstrap.min.js"></script>
 </body>
 </html>

@@ -29,12 +29,13 @@
             <a class="sidebar-brand d-flex align-items-center justify-content-center" asp-controller="Panel" asp-action="Index">
                 <div class="sidebar-brand-icon rotate-n-15">
                     @* هذه الصورة يجب انن تتغير بين ادمن ومستخدم *@
-                    @if (User.IsInRole("Admin"))
+                    @* @if (User.IsInRole("Admin"))
                     {
                         <img  src="~/assets/images/buttons/Admin (3).png" />
-                    }
+                    } *@
+						<img width="30%" src="~/assets/images/logo.png" / >
                 </div>
-                <div class="sidebar-brand-text mx-3">Ali&Amina <sup>JSAM</sup></div>
+                <div class="sidebar-brand-text mx-3">RUST Portal <sup>JSAM</sup></div>
             </a>
             <hr class="sidebar-divider my-0">
             <li class="nav-item active">
@@ -118,7 +119,6 @@
                     </div>
                             </li>
                 }
-
 
             @if (User.IsInRole("Learner"))
             {
