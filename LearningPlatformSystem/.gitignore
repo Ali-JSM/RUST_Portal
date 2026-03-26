@@ -3,6 +3,7 @@
 # =========================
 bin/
 obj/
+
 # =========================
 # User-specific files
 # =========================
@@ -33,7 +34,8 @@ obj/
 appsettings.Development.json
 appsettings.Local.json
 
-
+# Optional: if you REALLY want to ignore main config (not recommended)
+# appsettings.json
 
 # =========================
 # Secrets
@@ -56,4 +58,3 @@ node_modules/
 # =========================
 publish/
 wwwroot/dist/
-
