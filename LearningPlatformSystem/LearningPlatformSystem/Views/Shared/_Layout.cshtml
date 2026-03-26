@@ -35,8 +35,7 @@
             <hr class="sidebar-divider my-0">
             <li class="nav-item active">
                 <a class="nav-link" asp-controller="Panel" asp-action="Index">
-                    <i class="bi bi-menu-button-wide"></i>
-                    @if (User.IsInRole("Admin"))
+                                <i class="bi bi-person-circle"></i>                    @if (User.IsInRole("Admin"))
                     {
                         <span>لوحة التحكم - الصفحة الرئيسية</span>
                     }
@@ -47,8 +46,7 @@
 
                         <li class="nav-item">
                             <a class="nav-link" asp-controller="Enrollment" asp-action="PendingRequests">
-                                <i class="bi bi-list-check"></i>
-                                <span>الطلبات الجارية
+                                <i class="bi bi-pass"></i>                                <span>الطلبات الجارية
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="yellow" class="bi bi-bell-fill" viewBox="0 0 16 16">
                                         <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2m.995-14.901a1 1 0 1 0-1.99 0A5 5 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901"/>
                                     </svg>
@@ -68,12 +66,12 @@
             <hr class="sidebar-divider">
 
             <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" 
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseData" 
                 aria-expanded="true" aria-controls="collapseUtilities">
                     <i class="bi bi-database"></i>
                     <span>عرض البيانات</span>
                 </a>
-                <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
+                        <div id="collapseData" class="collapse" aria-labelledby="headingUtilities"
                 data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <a class="collapse-item" asp-controller="Courses" asp-action="Index">جميع المواد</a>
@@ -88,12 +86,12 @@
                     @if (User.IsInRole("Admin") || User.IsInRole("Editor"))
             {
                 <li class="nav-item">
-                    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
+                            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseDataEntry"
                     aria-expanded="true" aria-controls="collapseTwo">
                         <i class="bi bi-database-add"></i>
                         <span>إدخال البيانات</span>
                     </a>
-                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                            <div id="collapseDataEntry" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                         <div class="bg-white py-2 collapse-inner rounded">
                             <a class="collapse-item" asp-controller="Courses" asp-action="Create">إدخال مادة جديدة</a>
                             <a class="collapse-item" asp-controller="Tutors" asp-action="Create">إدخال مدرس جديد</a>
@@ -108,12 +106,12 @@
             @if (User.IsInRole("Admin") || User.IsInRole("Editor"))
             {
                 <li class="nav-item">
-                    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
+                    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseAdminAffairs"
                     aria-expanded="true" aria-controls="collapsePages">
-                        <i class="bi bi-tools"></i>
-                        <span>الأدوات الإدارية</span>
+                                <i class="bi bi-person-fill-gear"></i>
+                                <span>الأدوات الإدارية</span>
                     </a>
-                    <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+                            <div id="collapseAdminAffairs" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                         <div class="bg-white py-2 collapse-inner rounded">
                             <a class="collapse-item" asp-controller="Panel" asp-action="UsersDetails">جميع المستخدمين</a>
                                   @if (User.IsInRole("Admin")){
@@ -125,12 +123,12 @@
                     </div>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
+                            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseStudentAffairs"
                                        aria-expanded="true" aria-controls="collapsePages">
-                                    <i class="bi bi-tools"></i>
-                                    <span>شؤون الطلاب</span>
+                                <i class="bi bi-mortarboard"></i>
+                                <span>شؤون الطلاب</span>
                                 </a>
-                                <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+                            <div id="collapseStudentAffairs" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                                     <div class="bg-white py-2 collapse-inner rounded">
                                         <a class="collapse-item" asp-controller="Panel" asp-action="UsersDetails">جميع المستخدمين</a>
                                         @if (User.IsInRole("Admin"))
@@ -143,12 +141,12 @@
                                 </div>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
+                                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseHR"
                                        aria-expanded="true" aria-controls="collapsePages">
-                                    <i class="bi bi-tools"></i>
-                                    <span>الموارد البشرية</span>
+                                <i class="bi bi-person-lines-fill"></i>
+                                <span>الموارد البشرية</span>
                                 </a>
-                                <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+                            <div id="collapseHR" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                                     <div class="bg-white py-2 collapse-inner rounded">
                                         <a class="collapse-item" asp-controller="Panel" asp-action="UsersDetails">جميع المستخدمين</a>
                                         @if (User.IsInRole("Admin"))
@@ -161,12 +159,12 @@
                                 </div>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
+                                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseExams"
                                        aria-expanded="true" aria-controls="collapsePages">
-                                    <i class="bi bi-tools"></i>
-                                    <span>إدارة الإمتحانات</span>
+                                <i class="bi bi-journals"></i>
+                                <span>إدارة الإمتحانات</span>
                                 </a>
-                                <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+                            <div id="collapseExams" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                                     <div class="bg-white py-2 collapse-inner rounded">
                                         <a class="collapse-item" asp-controller="Panel" asp-action="UsersDetails">جميع المستخدمين</a>
                                         @if (User.IsInRole("Admin"))
