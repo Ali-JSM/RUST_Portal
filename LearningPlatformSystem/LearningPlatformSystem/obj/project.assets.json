@@ -7848,23 +7848,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\notimpossible\\.nuget\\packages\\": {},
+    "C:\\Users\\Great\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Current\\AliTheGreat\\AliPersona\\Projects\\Websites\\RUST_Portal\\RUST_Portal\\LearningPlatformSystem\\LearningPlatformSystem\\LearningPlatformSystem.csproj",
+      "projectUniqueName": "C:\\Users\\Great\\Desktop\\OxFiles.RUST.2026.3\\Projects\\ASP\\RUST_Portal\\LearningPlatformSystem\\LearningPlatformSystem\\LearningPlatformSystem.csproj",
       "projectName": "LearningPlatformSystem",
-      "projectPath": "D:\\Current\\AliTheGreat\\AliPersona\\Projects\\Websites\\RUST_Portal\\RUST_Portal\\LearningPlatformSystem\\LearningPlatformSystem\\LearningPlatformSystem.csproj",
-      "packagesPath": "C:\\Users\\notimpossible\\.nuget\\packages\\",
-      "outputPath": "D:\\Current\\AliTheGreat\\AliPersona\\Projects\\Websites\\RUST_Portal\\RUST_Portal\\LearningPlatformSystem\\LearningPlatformSystem\\obj\\",
+      "projectPath": "C:\\Users\\Great\\Desktop\\OxFiles.RUST.2026.3\\Projects\\ASP\\RUST_Portal\\LearningPlatformSystem\\LearningPlatformSystem\\LearningPlatformSystem.csproj",
+      "packagesPath": "C:\\Users\\Great\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Great\\Desktop\\OxFiles.RUST.2026.3\\Projects\\ASP\\RUST_Portal\\LearningPlatformSystem\\LearningPlatformSystem\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\notimpossible\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Great\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -7891,7 +7891,7 @@
         "auditLevel": "low",
         "auditMode": "direct"
       },
-      "SdkAnalysisLevel": "9.0.300"
+      "SdkAnalysisLevel": "10.0.200"
     },
     "frameworks": {
       "net9.0": {
@@ -7943,7 +7943,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.310/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.200/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
