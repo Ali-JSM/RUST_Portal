@@ -12,11 +12,13 @@ obj/
 *.userosscache
 *.sln.docstates
 
-# =========================
-# Visual Studio / VS Code
-# =========================
+# Visual Studio
 .vs/
-.vscode/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
 
 # =========================
 # Rider
