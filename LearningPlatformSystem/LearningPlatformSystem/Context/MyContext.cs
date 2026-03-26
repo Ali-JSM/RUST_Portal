@@ -10,8 +10,6 @@ namespace LearningPlatformSystem.Context
         //for migration 
         public DbSet<Course> Courses { get; set; }
         public DbSet<Learner> Learners { get; set; }
-        public DbSet<AwardedCertificate> AwardedCertificates { get; set; }
-        public DbSet<LearningMaterial> LearningMaterials { get; set; }
         public DbSet<Tutor> Tutors { get; set; }
         public DbSet<EnrollmentRequest> EnrollmentRequests { get; set; }
         public MyContext(DbContextOptions<MyContext> options) : base(options) { }
