@@ -2,80 +2,207 @@
 @model Login
 @{
     Layout = "~/Views/Shared/_PublicLayout.cshtml";
-    ViewData["Title"] = "منصة تعليمية مجانية- تسجيل الدخول";
+    ViewData["Title"] = "منصة تعليمية مجانية - تسجيل الدخول";
 }
-<main class="login-body d-flex" style="min-height:100vh;">
+
+<main class="login-body d-flex flex-column flex-lg-row min-vh-100">
 
     <!-- Left Side (Branding) -->
-    <div class="d-none d-lg-flex flex-column justify-content-center align-items-center text-white"
-         style="width:50%; background: linear-gradient(135deg,#1e1e1e,#2e7d32); padding:40px;">
-
-        <img src="~/assets/images/logo.png" style="width:120px; margin-bottom:20px;" />
-
-        <h2 style="font-weight:700;">منصة RUST التعليمية</h2>
-
-        <p style="text-align:center; max-width:400px; margin-top:20px; line-height:1.8;">
-            ضع كلام عن جامعة الرواد سوف اعدلها لاحقاً
-        </p>
-
-        <div style="margin-top:30px; font-size:14px; opacity:0.8;">
+    <div class="d-none d-lg-flex flex-column justify-content-center align-items-center text-white p-5 branding-panel">
+        <img src="~/assets/images/logo.png" alt="RUST Logo" class="logo mb-3" />
+        <h1 class="fw-bold mb-3">منصة RUST التعليمية</h1>
+        <p class="text-center tagline mb-4">
             مسارات حضارية ورؤية مستدامة
+        </p>
+        <div class="small opacity-75 text-center slogan">
+            العلوم والتقانة
         </div>
     </div>
 
     <!-- Right Side (Login Form) -->
-    <div class="d-flex justify-content-center align-items-center"
-         style="width:100%; max-width:500px; margin:auto;">
-
-        <form class="form-default w-100" asp-action="Login" method="post"
-              style="padding:40px; background:white; border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,0.1);">
-
+    <div class="d-flex justify-content-center align-items-center flex-grow-1 p-3">
+        <form class="login-form w-100" asp-action="Login" method="post">
             <div asp-validation-summary="All" class="text-danger mb-3"></div>
 
             <!-- Logo -->
             <div class="text-center mb-4">
-                <img src="~/assets/images/logo.png" style="width:80px;" />
-                <h4 class="mt-2">تسجيل الدخول</h4>
+                <img src="~/assets/images/logo.png" alt="Logo" class="logo-sm mb-2" />
+                <h3 class="fw-bold">تسجيل الدخول</h3>
             </div>
 
             <!-- Email -->
-            <div class="form-group mb-3">
-                <label asp-for="Email">البريد الإلكتروني</label>
-                <input asp-for="Email" class="form-control" placeholder="example@email.com">
+            <div class="form-floating mb-3">
+                <input asp-for="Email" class="form-control" id="floatingEmail" placeholder="البريد الإلكتروني" />
+                <label for="floatingEmail">البريد الإلكتروني</label>
                 <span asp-validation-for="Email" class="text-danger"></span>
             </div>
 
             <!-- Password -->
-            <div class="form-group mb-3">
-                <label asp-for="Password">كلمة المرور</label>
-                <input asp-for="Password" type="password" class="form-control" placeholder="********">
+            <div class="form-floating mb-3">
+                <input asp-for="Password" type="password" class="form-control" id="floatingPassword" placeholder="كلمة المرور" />
+                <label for="floatingPassword">كلمة المرور</label>
                 <span asp-validation-for="Password" class="text-danger"></span>
             </div>
 
-            <!-- Remember -->
-            <div class="form-group mb-3">
-                <label>
-                    <input asp-for="RememberMe" />
-                    تذكرني
-                </label>
-            </div>
+<!-- Remember Me -->
+<div class="form-check mb-3 d-flex align-items-center">
+    <input asp-for="RememberMe" class="form-check-input me-2" id="rememberMe" />
+    <label style="margin-right:20px" class="form-check-label" for="rememberMe">
+        تذكرني
+    </label>
+</div>
+<div>
+    <span asp-validation-for="RememberMe" class="text-danger d-block mt-1"></span>
+</div>
 
             <!-- Submit -->
-            <div class="form-group">
-                <button type="submit" class="btn w-100"
-                        style="background:#2e7d32; color:white; padding:10px; border-radius:8px;">
-                    تسجيل الدخول
-                </button>
-            </div>
+            <button type="submit" class="btn btn-magic w-100 mb-3">
+                تسجيل الدخول
+            </button>
 
-            <!-- Register -->
-            <div class="text-center mt-3">
-                <a asp-controller="Public" asp-action="CreateUser">
-                    لا تملك حساب؟ إنشاء حساب جديد
-                </a>
-            </div>
 
+                @* TODO: add sign up option for students later cm ALI *@
+                @*  *@
+          
+              <!-- Register -->
+<div class="text-center mt-2">
+     @* asp-controller="Public" asp-action="CreateUser" *@
+    <a href="#" class="link-magic btn btn-outline-success">
+        لا تملك حساب؟ إنشاء حساب جديد
+    </a>
+</div>
         </form>
     </div>
-
 </main>
+
+<style>
+    html, body {
+        height: 100%;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background: #f5f9f5;
+        margin: 0;
+    }
+
+    .login-body {
+        overflow: hidden;
+    }
+
+    /* Branding Panel */
+    .branding-panel {
+        width: 50%;
+        background: #2e7d32;
+        color: white;
+        transition: transform 0.5s ease, background 0.5s ease, color 0.5s ease, filter 0.5s ease;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .branding-panel:hover {
+        transform: scale(1.03);
+        filter: brightness(1.1);
+        background: #ffffff;
+        color: #2e7d32;
+    }
+
+    .branding-panel .logo {
+        width: 120px;
+        transition: transform 0.5s ease;
+    }
+
+    .branding-panel:hover .logo {
+        transform: rotate(-5deg) scale(1.1);
+    }
+
+    .tagline, .slogan {
+        transition: transform 0.5s ease, color 0.5s ease;
+    }
+
+    .branding-panel:hover .tagline {
+        transform: translateY(-5px);
+        color: #2e7d32;
+    }
+
+    .branding-panel:hover .slogan {
+        color: #2e7d32;
+    }
+    .branding-panel:hover h1,
+.branding-panel:hover p,
+.branding-panel:hover .slogan {
+    color: #2e7d32 !important;
+}
+    /* Login Form */
+    .login-form {
+        max-width: 400px;
+        background: white;
+        padding: 40px;
+        border-radius: 20px;
+        box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        transition: transform 0.5s ease, box-shadow 0.5s ease;
+    }
+
+    .login-form:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 25px 50px rgba(0,0,0,0.2);
+    }
+
+    .login-form .logo-sm {
+        width: 80px;
+        transition: transform 0.5s ease;
+    }
+
+    .login-form .logo-sm:hover {
+        transform: rotate(10deg) scale(1.1);
+    }
+
+    /* Floating inputs */
+    .form-floating > .form-control {
+        border-radius: 12px;
+        padding: 1.25rem 1rem 0.25rem 1rem;
+        transition: border 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .form-floating > .form-control:focus {
+        border-color: #2e7d32;
+        box-shadow: 0 0 12px rgba(46,125,50,0.35);
+    }
+
+    /* Magic Button */
+    .btn-magic {
+        background: linear-gradient(45deg, #2e7d32, #4caf50);
+        color: white;
+        font-weight: 600;
+        padding: 12px;
+        border-radius: 50px;
+        border: none;
+        transition: all 0.4s ease;
+        box-shadow: 0 5px 15px rgba(46,125,50,0.4);
+    }
+
+    .btn-magic:hover {
+        transform: scale(1.05) translateY(-3px);
+        box-shadow: 0 10px 20px rgba(46,125,50,0.5);
+        background: linear-gradient(45deg, #4caf50, #2e7d32);
+    }
+
+    /* Links */
+    .link-magic {
+        color: #2e7d32;
+        font-weight: 500;
+        transition: all 0.3s ease;
+    }
+
+    .link-magic:hover {
+        color:#ffffff;
+        text-decoration: underline;
+        transform: scale(1.05);
+    }
+
+    
+</style>
+<script>
+    function ReloadPage(){
+        document.location.reload(true)
+    }
+</script>

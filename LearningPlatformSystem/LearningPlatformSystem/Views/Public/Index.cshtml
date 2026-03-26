@@ -12,139 +12,169 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="~/publicthemeassets/assets/css/bootstrap.min.css">
-
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <style>
+        /* Base */
         body {
             font-family: 'Cairo', sans-serif;
-            background: #f5f7fa;
+            background: #f8fafc;
+            margin: 0;
+            color: #1f2937;
         }
 
+        /* Header / Logo Bar */
+        .header-bar {
+            background: white;
+            padding: 15px 30px;
+
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            display: flex;
+            justify-content: right;
+        }
+
+        .header-bar img {
+            height: 120px;
+            filter: drop-shadow(0 3px 8px rgba(0,0,0,0.2));
+        }
+
+        /* Hero Section */
         .hero {
-            min-height: 100vh;
+            min-height: 90vh;
             display: flex;
             align-items: center;
-            background: linear-gradient(135deg, #1e1e1e, #2e7d32);
+            background: #22c55e;
             color: white;
+            padding: 50px 0;
         }
 
+        .hero h1 {
+            font-size: 48px;
+            font-weight: 800;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 16px;
+            line-height: 1.8;
+            opacity: 0.9;
+        }
+
+        /* Buttons */
+        .btn-main {
+            background: #16a34a;
+            color: white;
+            border-radius: 8px;
+            padding: 12px 28px;
+            font-weight: 600;
+            border: none;
+            transition: 0.3s;
+            box-shadow: 0 6px 20px rgba(22,163,74,0.3);
+        }
+
+        .btn-main:hover {
+            background: #15803d;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(22,163,74,0.4);
+        }
+
+        /* Cards */
         .card-option {
-            background: white;
+            background: #ffffff;
+            color: #1f2937;
             border-radius: 12px;
-            padding: 25px;
+            padding: 25px 20px;
             text-align: center;
             transition: 0.3s;
             cursor: pointer;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            border: 1px solid #d1fae5;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
         }
 
-            .card-option:hover {
-                transform: translateY(-5px);
-            }
-
-        .btn-main {
-            background: #2e7d32;
-            color: white;
-            border-radius: 8px;
-            padding: 10px 20px;
+        .card-option:hover {
+            transform: translateY(-6px) scale(1.03);
+            border-color: #16a34a;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.12);
         }
 
-            .btn-main:hover {
-                background: #256628;
-                color: white;
-            }
+        .card-option h5 {
+            margin-top: 10px;
+            font-weight: 700;
+            color: #16a34a;
+        }
+
+        .card-option p {
+            font-size: 14px;
+            color: #374151;
+            opacity: 0.85;
+        }
+
+    
     </style>
 </head>
-
 <body>
 
+    <!-- Header Logo Bar -->
+    <div class="header-bar">
+        <img src="~/assets/images/logo.png" alt="RUST Logo" />
+    </div>
+
+    <!-- Hero Section -->
     <section class="hero">
         <div class="container">
-
             <div class="row align-items-center">
 
                 <!-- Left Content -->
-                <div class="col-lg-6 text-center text-lg-right mb-5 mb-lg-0">
-                    <img src="~/assets/images/logo.png" style="width:120px; margin-bottom:20px;" />
-
-                    <h1 style="font-weight:700;">
-                        بوابة RUST التعليمية
-                    </h1>
-
-                    <p style="margin-top:20px; line-height:1.8;">
-                        منصة تعليمية متكاملة تابعة لجامعة الرواد
-                        تتيح إدارة العملية التعليمية، متابعة الطلبة،
-                        وتقديم المحتوى الأكاديمي بطريقة حديثة.
-                    </p>
-
-                    <p style="margin-top:10px; opacity:0.8;">
-
-....                    </p>
+                <div class="col-lg-6 mb-5 mb-lg-0 text-center text-lg-right">
+                    <h1>بوابة RUST التعليمية</h1>
+                    <p>منصة تعليمية متكاملة تابعة لجامعة الرواد تتيح إدارة العملية التعليمية، متابعة الطلبة، وتقديم المحتوى الأكاديمي بطريقة حديثة.</p>
 
                     @if (User.Identity.IsAuthenticated)
                     {
-
-                        <a asp-controller="Panel" asp-action="Index" class="btn btn-main mt-3">
-                            الدخول إلى المنصة
-                        </a>
+                        <a asp-controller="Panel" asp-action="Index" class="btn btn-main mt-3">الدخول إلى المنصة</a>
                         <form asp-controller="Account" asp-action="Logout" method="post">
                             @Html.AntiForgeryToken()
-                            <button type="submit" class="btn btn-main mt-3">
-                                تسجيل الخروج
-                            </button>
+                            <button type="submit" class="btn btn-main mt-3">تسجيل الخروج</button>
                         </form>
                     }
                     else
                     {
-
-                        <a asp-controller="Account" asp-action="Login" class="btn btn-main mt-3">
-                            تسجيل الدخول الدخول إلى المنصة
-                        </a>
+                        <a asp-controller="Account" asp-action="Login" class="btn btn-main mt-3">تسجيل الدخول إلى المنصة</a>
                     }
                 </div>
 
                 <!-- Right Options -->
                 <div class="col-lg-6">
                     <div class="row">
-
-                        @* <!-- Student -->
-                        <div class="col-md-4 mb-3">
-                            <div class="card-option"
-                                 onclick="location.href='@Url.Action("Login", "Account")'">
-                                <h5>طالب</h5>
-                                <p>الدخول لمتابعة الدروس والمواد</p>
-                            </div>
-                        </div> *@
-
-                        <!-- Admin -->
-                        <div class="col-md-4 mb-3">
-                            <div class="card-option" style="background-color:greenyellow"
-                                 onclick="location.href='@Url.Action("Login", "Account")'">
-                                <h5>إدارة</h5>
-								<img src="~/images/admin (2).png" width="20%"/>
-                                <p>إدارة النظام والمحتوى</p>
+                        <div class="col-md-6 mb-4">
+                            <div class="card-option" onclick="location.href='@Url.Action("Login", "Account")'">
+                                <h5>بوابة الإدارة</h5>
+                                    <i class="bi bi-person-workspace"></i>
+                                    <p>إدارة النظام والمحتوى </p>
                             </div>
                         </div>
 
-                        @* <!-- Staff -->
-                        <div class="col-md-4 mb-3">
-                            <div class="card-option"
-                                 onclick="location.href='@Url.Action("Login", "Account")'">
-                                <h5>كادر تدريسي</h5>
-                                <p>إدارة الدورات والطلبة</p>
+                        <div class="col-md-6 mb-4">
+                            <div class="card-option" onclick="location.href='@Url.Action("Login", "Account")'">
+                                <h5>بوابة الكادر تدريسي</h5>
+                                    <i class="bi bi-mortarboard-fill"></i>                                    <p>إدارة الدورات والطلبة</p>
                             </div>
-                        </div> *@
-
+                        </div>
+                            <div class="col-md-6 mb-4">
+                                <div class="card-option" onclick="location.href='@Url.Action("Login", "Account")'">
+                                    <h5>بوابة الطالب</h5>
+                                    <i class="bi bi-mortarboard-fill"></i>                                    <p>إدارة الدورات والطلبة</p>
+                                </div>
+                            </div>
                     </div>
                 </div>
 
             </div>
-
         </div>
     </section>
 
     <!-- JS -->
     <script src="~/publicthemeassets/assets/js/vendor/jquery-1.12.4.min.js"></script>
     <script src="~/publicthemeassets/assets/js/bootstrap.min.js"></script>
-
 </body>
+
 </html>

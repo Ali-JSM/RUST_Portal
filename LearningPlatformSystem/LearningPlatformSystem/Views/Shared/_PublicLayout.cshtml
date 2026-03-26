@@ -1,14 +1,51 @@
 ﻿<!DOCTYPE html>
-<html lang="En">
+<html lang="ar" dir="rtl">
 <head>
+    <meta charset="utf-8">
     <link rel="stylesheet" href="~/publicthemeassets/assets/css/bootstrap.min.css">
-</head>
-<body>
-    <main role="main" class="pb-3">
-        @RenderBody()
-    </main>
-    @await RenderSectionAsync("Scripts", required: false)
-    <script src="~/publicthemeassets/assets/js/vendor/jquery-1.12.4.min.js"></script>
-    <script src="~/publicthemeassets/assets/js/bootstrap.min.js"></script>
-</body>
+        <style>
+                body {
+                    display: flex;
+                    min-height: 100vh;
+                    flex-direction: column;
+                    margin: 0;
+                    font-family: Arial, sans-serif;
+                }
+
+                main {
+                    flex: 1;
+                }
+
+                footer {
+                    background-color: #ffffff; /* White background */
+                    color: #28a745; /* Green text */
+                    text-align: center;
+                    padding: 15px 10px;
+                    border-top: 1px solid #ddd;
+                    font-size: 18px;
+                }
+
+                    footer a {
+                        color: #28a745;
+                        text-decoration: none;
+                    }
+
+                        footer a:hover {
+                            text-decoration: underline;
+                        }
+        </style>
+    </head>
+    <body>
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+
+        @await RenderSectionAsync("Scripts", required: false)
+        <script src="~/publicthemeassets/assets/js/vendor/jquery-1.12.4.min.js"></script>
+        <script src="~/publicthemeassets/assets/js/bootstrap.min.js"></script>
+
+        <footer>
+            جميع الحقوق محفوظة جامعة الرواد للعلوم والتقانة 2026 ©
+        </footer>
+    </body>
 </html>
