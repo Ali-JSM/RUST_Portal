@@ -1,0 +1,64 @@
+# =========================
+# Build outputs
+# =========================
+bin/
+obj/
+
+# =========================
+# User-specific files
+# =========================
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# =========================
+# Visual Studio / VS Code
+# =========================
+.vs/
+.vscode/
+
+# =========================
+# Rider
+# =========================
+.idea/
+
+# =========================
+# Logs
+# =========================
+*.log
+
+# =========================
+# Environment-specific config (IMPORTANT)
+# =========================
+appsettings.Development.json
+appsettings.Local.json
+
+# Optional: if you REALLY want to ignore main config (not recommended)
+# appsettings.json
+
+# =========================
+# Secrets
+# =========================
+secrets.json
+
+# =========================
+# OS files
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+# Node (if using frontend)
+# =========================
+node_modules/
+
+# =========================
+# Publish output
+# =========================
+publish/
+wwwroot/dist/
+
+# Build outputs
+bin/
+obj/
