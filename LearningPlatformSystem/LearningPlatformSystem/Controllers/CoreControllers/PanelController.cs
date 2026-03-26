@@ -74,17 +74,6 @@ public class PanelController : Controller
         return View(courses);
     }
 
-    [Authorize(Roles = "Learner")]
-    public async Task<IActionResult> MyCertificates()
-    {
-        var learner = await GetOrCreateLearnerAsync();
-        var certificates = await _context.AwardedCertificates
-            .Include(ac => ac.Course)
-            .Where(ac => ac.LearnerId == learner.LearnerId)
-            .ToListAsync();
-
-        return View(certificates);
-    }
     [Authorize]
     public async Task<IActionResult> Index()
     {
