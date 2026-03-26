@@ -42,11 +42,5 @@ namespace LearningPlatformSystem.Models.TableModels
 
         [ForeignKey("TutorId")]
         public Tutor ?Tutor { get; set; } 
-
-        //to certificates
-        public List<AwardedCertificate> ?AwardedCertificates { get; set; }
-
-        //to learning material
-        public LearningMaterial ?LearningMaterial { get; set; }
     }
 }

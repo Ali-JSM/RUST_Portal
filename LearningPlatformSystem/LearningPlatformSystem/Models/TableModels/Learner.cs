@@ -37,7 +37,6 @@ namespace LearningPlatformSystem.Models.TableModels
         public IFormFile clientFile { get; set; }
         //العلاقات
         public List<Course> ?Courses { get; set; }
-        public List<AwardedCertificate> ?AwardedCertificates { get; set; }
     }
 
 }
