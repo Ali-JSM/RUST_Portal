@@ -33,9 +33,9 @@
                     {
                         <img  src="~/assets/images/buttons/Admin (3).png" />
                     } *@
-						<img width="30%" src="~/assets/images/logo.png" / >
+						<img width="80%" src="~/assets/images/logo.png" / >
                 </div>
-                <div class="sidebar-brand-text mx-3">RUST Portal <sup>JSAM</sup></div>
+                <div class="sidebar-brand-text mx-3">RUST Portal <sup>Ali GT</sup></div>
             </a>
             <hr class="sidebar-divider my-0">
             <li class="nav-item active">
@@ -64,8 +64,6 @@
                         {
                         <a class="collapse-item" asp-controller="Tutors" asp-action="Index">جميع المدربين</a>
                             <a class="collapse-item" asp-controller="Learners" asp-action="Index">جميع المتدربين</a>
-                            <a class="collapse-item" asp-controller="AwardedCertificates" asp-action="Index">جميع الشهادات</a>
-                            <a class="collapse-item" asp-controller="LearningMaterials" asp-action="Index">جميع المواد التعليمية</a>
                         }
                     </div>
                     </div>
@@ -84,9 +82,7 @@
                             <a class="collapse-item" asp-controller="Tutors" asp-action="Create">إدخال مدرب جديد</a>
                             <a class="collapse-item" asp-controller="Learners" asp-action="Create">إدخال متدرب جديد</a>
                                         @if (User.IsInRole("Admin")){
-                            <a class="collapse-item" asp-controller="AwardedCertificates" asp-action="Create">إدخال شهادة جديدة</a>
                             }
-                            <a class="collapse-item" asp-controller="LearningMaterials" asp-action="Create">إدخال مادة تعليمية جديدة</a>
                         </div>
                     </div>
                 </li>
