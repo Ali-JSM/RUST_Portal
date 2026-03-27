@@ -1,13 +1,13 @@
 ﻿@{
     Layout = "~/Views/Shared/_PublicLayout.cshtml";
-    ViewData["Title"] = "بوابة RUST التعليمية";
+    ViewData["Title"] = "RUST - Portal";
 }
 <!doctype html>
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>بوابة RUST التعليمية</title>
+    <title>@ViewData["Title"]</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- CSS -->
@@ -22,19 +22,7 @@
             color: #1f2937;
         }
 
-        /* Header / Logo Bar */
-        .header-bar {
-            background: white;
-            padding: 15px 30px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-            display: flex;
-            justify-content: right;
-        }
-
-        .header-bar img {
-            height: 10px;
-            filter: drop-shadow(0 3px 8px rgba(0,0,0,0.2));
-        }
+ 
 
         /* Hero Section */
         .hero {
@@ -112,10 +100,7 @@
 </head>
 <body>
 
-    <!-- Header Logo Bar -->
-    <div class="header-bar">
-        <img src="~/assets/images/logo.png" alt="RUST Logo" />
-    </div>
+
 
     <!-- Hero Section -->
     <section class="hero">
@@ -124,8 +109,8 @@
 
                 <!-- Left Content -->
                 <div class="col-lg-6 mb-5 mb-lg-0 text-center text-lg-right">
-                    <h1>بوابة RUST التعليمية</h1>
-                    <p>منصة تعليمية متكاملة تابعة لجامعة الرواد تتيح إدارة العملية التعليمية، متابعة الطلبة، وتقديم المحتوى الأكاديمي بطريقة حديثة.</p>
+                    <h1>جامعة الرواد للعلوم والتقانة - البوابة التعليمية</h1>
+                    <p>منصة تابعة لجامعة الرواد تتيح إدارة العملية التعليمية، متابعة الطلبة، وتقديم المحتوى الأكاديمي بطريقة سلسة وحديثة.</p>
 
                     @if (User.Identity.IsAuthenticated)
                     {

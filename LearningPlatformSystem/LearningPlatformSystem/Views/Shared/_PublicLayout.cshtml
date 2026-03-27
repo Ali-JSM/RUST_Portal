@@ -18,7 +18,79 @@
                     font-family: Arial, sans-serif;
                 }
 
-      
+                /* Navbar */
+                .navbar-custom {
+                    position: fixed;
+                    top: 0;
+                    width: 100%;
+                    z-index: 1000;
+                    background: rgba(255, 255, 255, 0.85);
+                    backdrop-filter: blur(10px);
+                    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+                }
+
+                /* Container */
+                .nav-container {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    padding: 12px 40px;
+                }
+
+                /* Logo */
+                .nav-logo img {
+                    height: 45px; /* MUCH better than 3% */
+                    transition: transform 0.3s ease;
+                }
+
+                    .nav-logo img:hover {
+                        transform: scale(1.05);
+                    }
+
+                /* Links */
+                .nav-links {
+                    display: flex;
+                    gap: 30px;
+                }
+
+                    .nav-links a {
+                        text-decoration: none;
+                        color: #222;
+                        font-weight: 500;
+                        position: relative;
+                        transition: 0.3s;
+                    }
+
+                        /* Hover underline effect */
+                        .nav-links a::after {
+                            content: "";
+                            position: absolute;
+                            width: 0%;
+                            height: 2px;
+                            bottom: -5px;
+                            right: 0;
+                            background-color: #2e7d32; /* green */
+                            transition: 0.3s;
+                        }
+
+                        .nav-links a:hover::after {
+                            width: 100%;
+                            left: 0;
+                        }
+
+                /* Button */
+                .btn-login {
+                    background: #2e7d32;
+                    color: white;
+                    padding: 8px 18px;
+                    border-radius: 8px;
+                    text-decoration: none;
+                    transition: 0.3s;
+                }
+
+                    .btn-login:hover {
+                        background: #256628;
+                    }
 
                 footer {
                     bottom: 0;
@@ -46,6 +118,29 @@
         </style>
     </head>
     <body>
+        <header class="navbar-custom">
+            <div class="nav-container">
+
+                <!-- Logo -->
+                <div class="nav-logo">
+                    <img src="~/assets/images/Logo/PNG/main-logo.png" alt="RUST Logo" />
+                </div>
+
+                <!-- Navigation Links -->
+                <nav class="nav-links">
+                    <a href="#">الرئيسية</a>
+                    <a href="#">المواد</a>
+                    <a href="#">الأساتذة</a>
+                    <a href="#">تواصل</a>
+                </nav>
+
+                <!-- Action Button -->
+                <div class="nav-actions">
+                    <a href="#" class="btn-login">تسجيل الدخول</a>
+                </div>
+
+            </div>
+        </header>
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
