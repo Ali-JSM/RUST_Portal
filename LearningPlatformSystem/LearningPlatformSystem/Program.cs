@@ -86,6 +86,8 @@ async Task SeedRolesAndUsers(IServiceProvider serviceProvider)
             FirstName = "Ali",
             LastName = "Aljasem",
             SignUpDate = DateTime.Now
+            ,
+            EmailConfirmed = true
         };
 
         string adminPassword = "123123RustAli@";
