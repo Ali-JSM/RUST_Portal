@@ -14,10 +14,17 @@ public class AccountController : Controller
         _userManager = userManager;
         _signInManager = signInManager;
     }
-
     [HttpGet]
     public IActionResult Login(string returnUrl = null)
     {
+        // If the user is already authenticated, redirect them
+        if (User.Identity != null && User.Identity.IsAuthenticated)
+        {
+            if (!string.IsNullOrEmpty(returnUrl) && Url.IsLocalUrl(returnUrl))
+                return LocalRedirect(returnUrl);
+            return RedirectToAction("Index", "Panel"); // default page
+        }
+
         ViewData["ReturnUrl"] = returnUrl;
         return View();
     }
@@ -26,6 +33,14 @@ public class AccountController : Controller
     [ValidateAntiForgeryToken]
     public async Task<IActionResult> Login(Login model, string returnUrl = null)
     {
+        // If already authenticated, skip login process
+        if (User.Identity != null && User.Identity.IsAuthenticated)
+        {
+            if (!string.IsNullOrEmpty(returnUrl) && Url.IsLocalUrl(returnUrl))
+                return LocalRedirect(returnUrl);
+            return RedirectToAction("Index", "Dashboard");
+        }
+
         returnUrl ??= Url.Content("~/Public/Index");
         ViewData["ReturnUrl"] = returnUrl;
 
@@ -36,10 +51,14 @@ public class AccountController : Controller
 
             if (result.Succeeded)
             {
-                return LocalRedirect(returnUrl);
+                if (!string.IsNullOrEmpty(returnUrl) && Url.IsLocalUrl(returnUrl))
+                    return LocalRedirect(returnUrl);
+                return RedirectToAction("Index", "Panel");
             }
+
             ModelState.AddModelError(string.Empty, "Invalid login attempt.");
         }
+
         return View(model);
     }
     [HttpPost]
