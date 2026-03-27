@@ -3,7 +3,6 @@
     ViewData["Title"] = "RUST - Portal";
 }
 <!doctype html>
-<html lang="ar" dir="rtl">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -12,91 +11,8 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="~/publicthemeassets/assets/css/bootstrap.min.css">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-    <style>
-        /* Base */
-        body {
-            font-family: 'Cairo', sans-serif;
-            background: #f8fafc;
-            margin: 0;
-            color: #1f2937;
-        }
-
- 
-
-        /* Hero Section */
-        .hero {
-            min-height: 90vh;
-            display: flex;
-            align-items: center;
-            background: #22c55e;
-            color: white;
-            padding: 50px 0;
-        }
-
-        .hero h1 {
-            font-size: 48px;
-            font-weight: 800;
-            margin-bottom: 20px;
-        }
-
-        .hero p {
-            font-size: 16px;
-            line-height: 1.8;
-            opacity: 0.9;
-        }
-
-        /* Buttons */
-        .btn-main {
-            background: #16a34a;
-            color: white;
-            border-radius: 8px;
-            padding: 12px 28px;
-            font-weight: 600;
-            border: none;
-            transition: 0.3s;
-            box-shadow: 0 6px 20px rgba(22,163,74,0.3);
-        }
-
-        .btn-main:hover {
-            background: #15803d;
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(22,163,74,0.4);
-        }
-
-        /* Cards */
-        .card-option {
-            background: #ffffff;
-            color: #1f2937;
-            border-radius: 12px;
-            padding: 25px 20px;
-            text-align: center;
-            transition: 0.3s;
-            cursor: pointer;
-            border: 1px solid #d1fae5;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-        }
-
-        .card-option:hover {
-            transform: translateY(-6px) scale(1.03);
-            border-color: #16a34a;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.12);
-        }
-
-        .card-option h5 {
-            margin-top: 10px;
-            font-weight: 700;
-            color: #16a34a;
-        }
-
-        .card-option p {
-            font-size: 14px;
-            color: #374151;
-            opacity: 0.85;
-        }
-
-    
-    </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="~/Assets/css/CustomStyles/landingpage.css" />
 </head>
 <body>
 
@@ -111,7 +27,7 @@
                 <div class="col-lg-6 mb-5 mb-lg-0 text-center text-lg-right">
                     <h1>جامعة الرواد للعلوم والتقانة - البوابة التعليمية</h1>
                     <p>منصة تابعة لجامعة الرواد تتيح إدارة العملية التعليمية، متابعة الطلبة، وتقديم المحتوى الأكاديمي بطريقة سلسة وحديثة.</p>
-
+                        @* <p class="mb-4">...</p> *@
                     @if (User.Identity.IsAuthenticated)
                     {
                         <a asp-controller="Panel" asp-action="Index" class="btn btn-main mt-3">الدخول إلى المنصة</a>
@@ -131,9 +47,9 @@
                     <div class="row">
                         <div class="col-md-6 mb-4">
                             <div class="card-option" onclick="location.href='@Url.Action("Login", "Account")'">
-                                <h5>بوابة الإدارة</h5>
                                     <i class="bi bi-person-workspace"></i>
-                                    <p>إدارة النظام والمحتوى </p>
+                                    <h5>بوابة الإدارة</h5>
+                                    <p>إدارة النظام والمحتوى</p>
                             </div>
                         </div>
 
@@ -160,5 +76,3 @@
     <script src="~/publicthemeassets/assets/js/vendor/jquery-1.12.4.min.js"></script>
     <script src="~/publicthemeassets/assets/js/bootstrap.min.js"></script>
 </body>
-
-</html>

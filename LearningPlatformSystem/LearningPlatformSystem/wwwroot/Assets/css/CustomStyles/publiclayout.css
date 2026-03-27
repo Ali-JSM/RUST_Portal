@@ -1,0 +1,88 @@
+﻿/* ===== GLOBAL RESET ===== */
+body {
+    margin: 0;
+    font-family: 'Cairo', sans-serif;
+    background: #f1f5f9;
+    color: #1f2937;
+    padding-top: 100px; /* prevents navbar overlap */
+
+}
+
+/* ===== FLOATING NAVBAR ===== */
+/* ===== NAVBAR FIXED CLEAN ===== */
+.navbar-custom {
+    position: fixed;
+    top: 10px;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+}
+
+/* Inner container (this fixes alignment issues) */
+.nav-container {
+    width: 95%;
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 10px 25px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+}
+/* Logo */
+.nav-logo img {
+    height: 40px; /* FIXED size */
+    width: auto;
+    object-fit: contain;
+}
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+    .nav-links a {
+        text-decoration: none;
+        color: #374151;
+        font-weight: 600;
+        transition: 0.2s;
+    }
+
+        .nav-links a:hover {
+            color: #16a34a;
+            text-decoration:none;
+        }
+
+
+
+/* Button */
+.btn-login {
+    background: #16a34a;
+    color: white;
+    padding: 8px 18px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+    .btn-login:hover {
+        background: #ffffff;
+        transform: translateY(-2px);
+    }
+
+/* ===== MAIN ===== */
+main {
+    flex: 1;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    background: #ffffff;
+    text-align: center;
+    padding: 18px;
+    border-top: 1px solid #e5e7eb;
+    font-size: 15px;
+}
