@@ -67,7 +67,7 @@
               <!-- Register -->
 <div class="text-center mt-2">
      @* asp-controller="Public" asp-action="CreateUser" *@
-    <a href="#" class="link-magic btn btn-outline-success">
+    <a href="ReloadPage();" class="link-magic btn btn-outline-success">
         لا تملك حساب؟ إنشاء حساب جديد
     </a>
 </div>
@@ -201,8 +201,4 @@
 
     
 </style>
-<script>
-    function ReloadPage(){
-        document.location.reload(true)
-    }
-</script>
+<script src="~/assets/js/customscripts/pagemethds.js"></script>

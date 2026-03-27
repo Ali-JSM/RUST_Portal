@@ -4,7 +4,7 @@ body {
     font-family: 'Cairo', sans-serif;
     background: #f1f5f9;
     color: #1f2937;
-    padding-top: 100px; /* prevents navbar overlap */
+    padding-top: 50px; /* prevents navbar overlap */
 
 }
 
@@ -20,7 +20,7 @@ body {
     justify-content: center;
 }
 
-/* Inner container (this fixes alignment issues) */
+/* Container */
 .nav-container {
     width: 95%;
     max-width: 1200px;
@@ -32,29 +32,59 @@ body {
     padding: 10px 25px;
     box-shadow: 0 6px 20px rgba(0,0,0,0.08);
 }
-/* Logo */
-.nav-logo img {
-    height: 40px; /* FIXED size */
-    width: auto;
-    object-fit: contain;
-}
-.nav-links {
+/* Logo + Title Container */
+.nav-logo {
     display: flex;
     align-items: center;
-    gap: 25px;
+    gap: 12px; /* space between logo and title */
 }
 
-    .nav-links a {
+    .nav-logo img {
+        height: 50px; /* bigger and consistent */
+        width: auto;
+        object-fit: contain;
+        border-radius: 8px; /* subtle rounded corners for modern feel */
+        box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    .nav-logo a {
+        font-size: 20px;
+        font-weight: 700;
+        color: #16a34a; /* green accent */
         text-decoration: none;
-        color: #374151;
-        font-weight: 600;
+        line-height: 1.2;
         transition: 0.2s;
     }
 
-        .nav-links a:hover {
-            color: #16a34a;
-            text-decoration:none;
+        .nav-logo a:hover {
+            color: #15803d;
+            text-decoration: none;
         }
+/* Links wrapper */
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 100px; /* FIXED spacing */
+}
+
+/* Links */
+.nav-links a {
+    text-decoration: none !important; /* remove underline */
+    color: #374151;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+    .nav-links a:hover {
+        color: #16a34a;
+    }
+
+/* Right side (button container) */
+.nav-actions {
+    display: flex;
+    align-items: center;
+    min-width: 100px; /* prevents layout shift */
+    justify-content: flex-end;
+}
 
 
 
@@ -66,10 +96,12 @@ body {
     border-radius: 8px;
     font-weight: 600;
     transition: 0.2s;
+    text-decoration: none !important;
 }
 
     .btn-login:hover {
-        background: #ffffff;
+        background: #15803d;
+        color: white;
         transform: translateY(-2px);
     }
 
@@ -80,6 +112,10 @@ main {
 
 /* ===== FOOTER ===== */
 footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
     background: #ffffff;
     text-align: center;
     padding: 18px;

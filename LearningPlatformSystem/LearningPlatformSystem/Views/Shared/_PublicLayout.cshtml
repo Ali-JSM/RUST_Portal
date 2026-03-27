@@ -1,4 +1,8 @@
-﻿<!DOCTYPE html>
+﻿@{
+    var isLoginPage = ViewContext.RouteData.Values["controller"]?.ToString() == "Account" &&
+            ViewContext.RouteData.Values["action"]?.ToString() == "Login";
+}
+<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="utf-8">
@@ -13,21 +17,20 @@
 
                 <!-- Logo -->
                 <div class="nav-logo">
-                    <img src="~/assets/images/Logo/PNG/main-logo 32 by 45.png" alt="RUST Logo" />
+                    <div class="nav-logo">
+                        <img src="~/assets/images/Logo/PNG/main-logo 32 by 45.png" alt="RUST Logo" />
+                        <a href="">جامعة الرواد للعلوم والتقانة</a>
+                    </div>
                 </div>
 
                 <!-- Links -->
                 <nav class="nav-links">
-                    <a href="#">الرئيسية</a>
-                    <a href="#">المواد</a>
-                    <a href="#">الأساتذة</a>
-                    <a href="#">تواصل</a>
-                </nav>
+                    <a href="">الرئيسية</a>
+                    <a href="">المواد</a>
+                    <a href="">الأساتذة</a>
+                    <a href="">تواصل</a>
 
-                @* <!-- Action -->
-                <div>
-                    <a href="#" class="btn-login">تسجيل الدخول</a>
-                </div> *@
+                </nav>
                 @if (User.Identity.IsAuthenticated)
                 {
                     <form asp-controller="Account" asp-action="Logout" method="post">
@@ -37,7 +40,17 @@
                 }
                 else
                 {
-                    <a asp-controller="Account" asp-action="Login" class="btn-login">تسجيل الدخول إلى المنصة</a>
+                    <!-- Actions (IMPORTANT wrapper) -->
+                    <div class="nav-actions">
+                        @if (!isLoginPage)
+                        {
+                            <a asp-controller="Account" asp-action="Login" class="btn-login">تسجيل الدخول إلى المنصة</a>
+                        }
+                    </div>
+
+                    if (!@isLoginPage)
+                    {
+                    }
                 }
             </div>
         </header>
@@ -54,3 +67,4 @@
         </footer>
     </body>
 </html>
+<script src="~/assets/js/customscripts/pagemethds.js"></script>
