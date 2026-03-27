@@ -126,17 +126,13 @@
                             <li class="nav-item">
                             <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseStudentAffairs"
                                        aria-expanded="true" aria-controls="collapsePages">
+                                <i class="bi bi-lock-fill"></i>
                                 <i class="bi bi-mortarboard"></i>
                                 <span>شؤون الطلاب</span>
                                 </a>
                             <div id="collapseStudentAffairs" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                                     <div class="bg-white py-2 collapse-inner rounded">
-                                        <a class="collapse-item" asp-controller="Panel" asp-action="UsersDetails">جميع المستخدمين</a>
-                                        @if (User.IsInRole("Admin"))
-                                        {
-                                            <a class="collapse-item" asp-controller="Panel" asp-action="CreateUser">إتشاء مستخدم جديد</a>
-                                            <a class="collapse-item" asp-controller="Panel" asp-action="ManageEnrollments">تسجيل الطلاب على المواد</a>
-                                        }
+                                
 
                                     </div>
                                 </div>
@@ -144,35 +140,27 @@
                             <li class="nav-item">
                                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseHR"
                                        aria-expanded="true" aria-controls="collapsePages">
+                                <i class="bi bi-lock-fill"></i>
                                 <i class="bi bi-person-lines-fill"></i>
                                 <span>الموارد البشرية</span>
                                 </a>
                             <div id="collapseHR" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                                     <div class="bg-white py-2 collapse-inner rounded">
-                                        <a class="collapse-item" asp-controller="Panel" asp-action="UsersDetails">جميع المستخدمين</a>
-                                        @if (User.IsInRole("Admin"))
-                                        {
-                                            <a class="collapse-item" asp-controller="Panel" asp-action="CreateUser">إتشاء مستخدم جديد</a>
-                                            <a class="collapse-item" asp-controller="Panel" asp-action="ManageEnrollments">تسجيل الطلاب على المواد</a>
-                                        }
+                                 
 
                                     </div>
                                 </div>
                             </li>
-                            <li class="nav-item">
+                        <li class="nav-item" >
                                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseExams"
                                        aria-expanded="true" aria-controls="collapsePages">
+                                <i class="bi bi-lock-fill"></i>
                                 <i class="bi bi-journals"></i>
                                 <span>إدارة الإمتحانات</span>
                                 </a>
                             <div id="collapseExams" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                                     <div class="bg-white py-2 collapse-inner rounded">
-                                        <a class="collapse-item" asp-controller="Panel" asp-action="UsersDetails">جميع المستخدمين</a>
-                                        @if (User.IsInRole("Admin"))
-                                        {
-                                            <a class="collapse-item" asp-controller="Panel" asp-action="CreateUser">إتشاء مستخدم جديد</a>
-                                            <a class="collapse-item" asp-controller="Panel" asp-action="ManageEnrollments">تسجيل الطلاب على المواد</a>
-                                        }
+                                  
 
                                     </div>
                                 </div>
