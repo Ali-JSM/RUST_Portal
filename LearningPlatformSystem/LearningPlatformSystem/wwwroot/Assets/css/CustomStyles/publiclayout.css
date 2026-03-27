@@ -5,7 +5,7 @@ body {
     background: #f1f5f9;
     color: #1f2937;
     padding-top: 50px; /* prevents navbar overlap */
-
+    cursor: url("~/assets/images/icons/ico/handwriting_page_01.ico"), default;
 }
 
 /* ===== FLOATING NAVBAR ===== */
