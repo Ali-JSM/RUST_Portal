@@ -1,0 +1,55 @@
+﻿/* === RTL FIX FOR SB ADMIN 2 === */
+
+html[dir="rtl"] body {
+    direction: rtl;
+    text-align: right;
+}
+
+/* Move sidebar to RIGHT */
+#wrapper {
+    flex-direction: row-reverse;
+}
+
+/* Sidebar itself */
+.sidebar {
+    right: 0;
+    left: auto;
+}
+
+/* Content should not overlap */
+#content-wrapper {
+    margin-right: 14rem; /* same as sidebar width */
+    margin-left: 0;
+}
+
+/* When sidebar collapsed */
+.sidebar.toggled + #content-wrapper {
+    margin-right: 6.5rem;
+}
+
+/* Fix nav links alignment */
+.sidebar .nav-item .nav-link {
+    text-align: right;
+}
+
+    /* Icons spacing (flip it) */
+    .sidebar .nav-item .nav-link i {
+        margin-left: 0.5rem;
+        margin-right: 0;
+    }
+
+/* Collapse arrow fix */
+.sidebar .nav-item .collapse .collapse-inner {
+    text-align: right;
+}
+
+/* Topbar */
+.topbar {
+    direction: rtl;
+}
+
+/* Toggle button alignment */
+#sidebarToggleTop {
+    margin-left: auto;
+    margin-right: 0;
+}
