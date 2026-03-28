@@ -3,8 +3,28 @@
   "WorkspaceRootPath": "D:\\Current\\AliTheGreat\\AliPersona\\Projects\\Websites\\RUST_Portal\\RUST_Portal\\LearningPlatformSystem\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{6B979392-FF9F-4616-9DFD-1A78A7927DA3}|LearningPlatformSystem\\LearningPlatformSystem.csproj|d:\\current\\alithegreat\\alipersona\\projects\\websites\\rust_portal\\rust_portal\\learningplatformsystem\\learningplatformsystem\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6B979392-FF9F-4616-9DFD-1A78A7927DA3}|LearningPlatformSystem\\LearningPlatformSystem.csproj|solutionrelative:learningplatformsystem\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6B979392-FF9F-4616-9DFD-1A78A7927DA3}|LearningPlatformSystem\\LearningPlatformSystem.csproj|d:\\current\\alithegreat\\alipersona\\projects\\websites\\rust_portal\\rust_portal\\learningplatformsystem\\learningplatformsystem\\wwwroot\\assets\\css\\customstyles\\landingpage.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{6B979392-FF9F-4616-9DFD-1A78A7927DA3}|LearningPlatformSystem\\LearningPlatformSystem.csproj|solutionrelative:learningplatformsystem\\wwwroot\\assets\\css\\customstyles\\landingpage.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6B979392-FF9F-4616-9DFD-1A78A7927DA3}|LearningPlatformSystem\\LearningPlatformSystem.csproj|d:\\current\\alithegreat\\alipersona\\projects\\websites\\rust_portal\\rust_portal\\learningplatformsystem\\learningplatformsystem\\views\\public\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6B979392-FF9F-4616-9DFD-1A78A7927DA3}|LearningPlatformSystem\\LearningPlatformSystem.csproj|solutionrelative:learningplatformsystem\\views\\public\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6B979392-FF9F-4616-9DFD-1A78A7927DA3}|LearningPlatformSystem\\LearningPlatformSystem.csproj|d:\\current\\alithegreat\\alipersona\\projects\\websites\\rust_portal\\rust_portal\\learningplatformsystem\\learningplatformsystem\\views\\shared\\_publiclayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6B979392-FF9F-4616-9DFD-1A78A7927DA3}|LearningPlatformSystem\\LearningPlatformSystem.csproj|solutionrelative:learningplatformsystem\\views\\shared\\_publiclayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{6B979392-FF9F-4616-9DFD-1A78A7927DA3}|LearningPlatformSystem\\LearningPlatformSystem.csproj|d:\\current\\alithegreat\\alipersona\\projects\\websites\\rust_portal\\rust_portal\\learningplatformsystem\\learningplatformsystem\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{6B979392-FF9F-4616-9DFD-1A78A7927DA3}|LearningPlatformSystem\\LearningPlatformSystem.csproj|solutionrelative:learningplatformsystem\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6B979392-FF9F-4616-9DFD-1A78A7927DA3}|LearningPlatformSystem\\LearningPlatformSystem.csproj|d:\\current\\alithegreat\\alipersona\\projects\\websites\\rust_portal\\rust_portal\\learningplatformsystem\\learningplatformsystem\\wwwroot\\assets\\css\\customstyles\\sb-admin2fixrtl.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{6B979392-FF9F-4616-9DFD-1A78A7927DA3}|LearningPlatformSystem\\LearningPlatformSystem.csproj|solutionrelative:learningplatformsystem\\wwwroot\\assets\\css\\customstyles\\sb-admin2fixrtl.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -27,14 +47,79 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Current\\AliTheGreat\\AliPersona\\Projects\\Websites\\RUST_Portal\\RUST_Portal\\LearningPlatformSystem\\LearningPlatformSystem\\Program.cs",
+              "RelativeDocumentMoniker": "LearningPlatformSystem\\Program.cs",
+              "ToolTip": "D:\\Current\\AliTheGreat\\AliPersona\\Projects\\Websites\\RUST_Portal\\RUST_Portal\\LearningPlatformSystem\\LearningPlatformSystem\\Program.cs",
+              "RelativeToolTip": "LearningPlatformSystem\\Program.cs",
+              "ViewState": "AgIAAEkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-27T20:25:28.067Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "landingpage.css",
+              "DocumentMoniker": "D:\\Current\\AliTheGreat\\AliPersona\\Projects\\Websites\\RUST_Portal\\RUST_Portal\\LearningPlatformSystem\\LearningPlatformSystem\\wwwroot\\Assets\\css\\CustomStyles\\landingpage.css",
+              "RelativeDocumentMoniker": "LearningPlatformSystem\\wwwroot\\Assets\\css\\CustomStyles\\landingpage.css",
+              "ToolTip": "D:\\Current\\AliTheGreat\\AliPersona\\Projects\\Websites\\RUST_Portal\\RUST_Portal\\LearningPlatformSystem\\LearningPlatformSystem\\wwwroot\\Assets\\css\\CustomStyles\\landingpage.css",
+              "RelativeToolTip": "LearningPlatformSystem\\wwwroot\\Assets\\css\\CustomStyles\\landingpage.css",
+              "ViewState": "AgIAAEIAAAAAAAAAAAAAAFMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-03-27T19:50:29.637Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\Current\\AliTheGreat\\AliPersona\\Projects\\Websites\\RUST_Portal\\RUST_Portal\\LearningPlatformSystem\\LearningPlatformSystem\\Views\\Public\\Index.cshtml",
+              "RelativeDocumentMoniker": "LearningPlatformSystem\\Views\\Public\\Index.cshtml",
+              "ToolTip": "D:\\Current\\AliTheGreat\\AliPersona\\Projects\\Websites\\RUST_Portal\\RUST_Portal\\LearningPlatformSystem\\LearningPlatformSystem\\Views\\Public\\Index.cshtml",
+              "RelativeToolTip": "LearningPlatformSystem\\Views\\Public\\Index.cshtml",
+              "ViewState": "AgIAACgAAAAAAAAAAAAiwD8AAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-27T20:15:01.942Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "_PublicLayout.cshtml",
+              "DocumentMoniker": "D:\\Current\\AliTheGreat\\AliPersona\\Projects\\Websites\\RUST_Portal\\RUST_Portal\\LearningPlatformSystem\\LearningPlatformSystem\\Views\\Shared\\_PublicLayout.cshtml",
+              "RelativeDocumentMoniker": "LearningPlatformSystem\\Views\\Shared\\_PublicLayout.cshtml",
+              "ToolTip": "D:\\Current\\AliTheGreat\\AliPersona\\Projects\\Websites\\RUST_Portal\\RUST_Portal\\LearningPlatformSystem\\LearningPlatformSystem\\Views\\Shared\\_PublicLayout.cshtml",
+              "RelativeToolTip": "LearningPlatformSystem\\Views\\Shared\\_PublicLayout.cshtml",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-27T20:14:53.144Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "sb-admin2FixRtl.css",
+              "DocumentMoniker": "D:\\Current\\AliTheGreat\\AliPersona\\Projects\\Websites\\RUST_Portal\\RUST_Portal\\LearningPlatformSystem\\LearningPlatformSystem\\wwwroot\\Assets\\css\\CustomStyles\\sb-admin2FixRtl.css",
+              "RelativeDocumentMoniker": "LearningPlatformSystem\\wwwroot\\Assets\\css\\CustomStyles\\sb-admin2FixRtl.css",
+              "ToolTip": "D:\\Current\\AliTheGreat\\AliPersona\\Projects\\Websites\\RUST_Portal\\RUST_Portal\\LearningPlatformSystem\\LearningPlatformSystem\\wwwroot\\Assets\\css\\CustomStyles\\sb-admin2FixRtl.css",
+              "RelativeToolTip": "LearningPlatformSystem\\wwwroot\\Assets\\css\\CustomStyles\\sb-admin2FixRtl.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADcAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-03-27T19:50:30.807Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "D:\\Current\\AliTheGreat\\AliPersona\\Projects\\Websites\\RUST_Portal\\RUST_Portal\\LearningPlatformSystem\\LearningPlatformSystem\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "LearningPlatformSystem\\Views\\Shared\\_Layout.cshtml",
               "ToolTip": "D:\\Current\\AliTheGreat\\AliPersona\\Projects\\Websites\\RUST_Portal\\RUST_Portal\\LearningPlatformSystem\\LearningPlatformSystem\\Views\\Shared\\_Layout.cshtml",
               "RelativeToolTip": "LearningPlatformSystem\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAHEAAAAAAAAAAAASwAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAHIAAAAAAAAAAAAqwIAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-03-27T17:20:53.786Z",
+              "WhenOpened": "2026-03-27T19:45:44.216Z",
               "EditorCaption": ""
             }
           ]

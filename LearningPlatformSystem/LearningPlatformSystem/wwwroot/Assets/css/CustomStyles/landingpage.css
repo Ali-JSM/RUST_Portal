@@ -74,3 +74,13 @@
         border-color: #16a34a;
         transform: translateY(-4px);
     }
+.card-option-disabled {
+    border: 1px solid #808080;
+    color: #808080;
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 25px 20px;
+    text-align: center;
+    transition: 0.25s;
+    cursor: pointer;
+}
